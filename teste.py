@@ -3,7 +3,9 @@ import numpy as np
 from sklearn.metrics import classification_report, confusion_matrix 
 from svm import SVM
 from sklearn.model_selection import train_test_split
-from kernels import RBF
+import kernels
+from metrics import accuracy
+import time
 
 
 df = pd.read_csv('breast.csv')
@@ -43,22 +45,40 @@ X_train, X_test, y_train, y_test = train_test_split(
 						df_feat, np.ravel(df_target), 
 				test_size = 0.30, random_state = 101) 
 
-# train the model on train set 
-#model = SVM.fit(X_train, y_train) 
-model = SVM()
+# train the model on train set
+C=1
+gamma=0.1 
+kernel = kernels.RBF(gamma)
+start_time = time.perf_counter()
+model = SVM(C,kernel)
 model.fit(X_train, y_train)
 
-'''# print prediction results 
+
+
+'''# print prediction results --> isto imprimia uma classe -1
 predictions = model.predict(X_test) 
 print(classification_report(y_test, predictions))'''
 
-
-predictions = model.predict(X_test)
+predictions = model.predict(X_test) # aqui já só imprime classes 0 e 1
 predictions = np.where(predictions == -1, 0, predictions)  
+
+end_time = time.perf_counter()
+
+duration = end_time - start_time
+
+score = accuracy(y_test, predictions)
+
+print(f"C={C}, gamma={gamma}, kernel={kernel}; score={score:.3f}; total_time={duration:.2f} s")
+
 
 print(classification_report(y_test, predictions))
 
-C_values = [0.1, 1, 10, 100, 1000]
+'''C_values = [0.1, 1, 10, 100, 1000]
 gamma_values = [1, 0.1, 0.01, 0.001, 0.0001]
-best_score = 0
+best_score = 0'''
+
+
+
+
+
 

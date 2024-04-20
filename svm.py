@@ -4,7 +4,6 @@ import logging
 import numpy as np
 
 from bases import BaseEstimator
-from kernels import Linear
 
 np.random.seed(9999)
 
@@ -15,7 +14,7 @@ The Simplified SMO Algorithm http://cs229.stanford.edu/materials/smo.pdf
 
 
 class SVM(BaseEstimator):
-    def __init__(self, C=1.0, kernel=None, tol=1e-3, max_iter=100):
+    def __init__(self, C, kernel, tol=1e-3, max_iter=100):
         """Support vector machines implementation using simplified SMO optimization.
 
         Parameters
@@ -28,11 +27,11 @@ class SVM(BaseEstimator):
         self.C = C
         self.tol = tol
         self.max_iter = max_iter
-        if kernel is None:
+        '''if kernel is None:
             self.kernel = Linear()
         else:
-            self.kernel = kernel
-
+            self.kernel = kernel'''
+        self.kernel = kernel
         self.b = 0
         self.alpha = None
         self.K = None

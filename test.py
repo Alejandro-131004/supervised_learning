@@ -41,12 +41,12 @@ print(classification_report(y_test, predictions))
 
 
 
-'''from sklearn.model_selection import GridSearchCV 
+from sklearn.model_selection import GridSearchCV 
   
 # defining parameter range 
 param_grid = {'C': [0.1, 1, 10, 100, 1000],  
               'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 
-              'kernel': ['linear']}  
+              'kernel': ['rbf']}  
   
 grid = GridSearchCV(SVC(), param_grid, refit = True, verbose = 3) 
   
@@ -68,4 +68,4 @@ print(grid.best_estimator_)
 grid_predictions = grid.predict(X_test) 
   
 # print classification report 
-print(classification_report(y_test, grid_predictions)) '''
+print(classification_report(y_test, grid_predictions)) 
