@@ -9,7 +9,7 @@ try:
 except ImportError:
     from sklearn.cross_validation import train_test_split
 
-from ensemble import RandomForestClassifier, RandomForestRegressor
+from ensemble_randomforest import RandomForestClassifier, RandomForestRegressor
 from metrics import mean_squared_error
 
 logging.basicConfig(level=logging.DEBUG)

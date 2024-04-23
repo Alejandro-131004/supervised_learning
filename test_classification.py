@@ -1,6 +1,6 @@
 from sklearn.metrics import roc_auc_score
 
-from ensemble import RandomForestClassifier
+from ensemble_randomforest import RandomForestClassifier
 
 try:
     from sklearn.model_selection import train_test_split
