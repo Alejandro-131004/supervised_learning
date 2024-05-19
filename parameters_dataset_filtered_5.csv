@@ -23,7 +23,3 @@ base,3,Eucledian,0.65,0.66,0.65,0.65
 base,5,Eucledian,0.67,0.68,0.67,0.71
 base,7,Eucledian,0.69,0.7,0.69,0.71
 base,9,Eucledian,0.67,0.68,0.67,0.68
-features,3,Eucledian Features,0.76,0.76,0.76,0.73
-features,5,Eucledian Features,0.74,0.74,0.74,0.7
-features,7,Eucledian Features,0.76,0.77,0.76,0.79
-features,9,Eucledian Features,0.75,0.75,0.75,0.73
