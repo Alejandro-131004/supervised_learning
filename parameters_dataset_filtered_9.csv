@@ -1,0 +1,29 @@
+knn_type,k,distance,accuracy,precision,recall,sensitivity
+bagging,3,Cosine,0.13,0.11,0.13,0.22
+bagging,3,Euclidean,0.91,0.91,0.91,0.92
+bagging,3,Jaccard,0.48,0.47,0.48,0.38
+bagging,3,Mahalanobis,0.5,0.75,0.5,0.33
+bagging,3,Manhattan,0.91,0.91,0.91,0.91
+bagging,5,Cosine,0.13,0.11,0.13,0.22
+bagging,5,Euclidean,0.92,0.92,0.92,0.93
+bagging,5,Jaccard,0.45,0.45,0.45,0.36
+bagging,5,Mahalanobis,0.5,0.75,0.5,0.67
+bagging,5,Manhattan,0.92,0.92,0.92,0.93
+bagging,7,Cosine,0.13,0.11,0.13,0.22
+bagging,7,Euclidean,0.92,0.92,0.92,0.93
+bagging,7,Jaccard,0.44,0.44,0.44,0.33
+bagging,7,Mahalanobis,0.5,0.75,0.5,0.33
+bagging,7,Manhattan,0.92,0.92,0.92,0.93
+bagging,9,Cosine,0.13,0.11,0.13,0.22
+bagging,9,Euclidean,0.92,0.92,0.92,0.93
+bagging,9,Jaccard,0.44,0.43,0.44,0.31
+bagging,9,Mahalanobis,0.5,0.75,0.5,0.33
+bagging,9,Manhattan,0.92,0.92,0.92,0.93
+base,3,Eucledian,0.91,0.91,0.91,0.92
+base,5,Eucledian,0.92,0.92,0.92,0.93
+base,7,Eucledian,0.92,0.92,0.92,0.93
+base,9,Eucledian,0.92,0.92,0.92,0.93
+features,3,Eucledian Features,0.66,0.66,0.66,0.69
+features,5,Eucledian Features,0.78,0.78,0.78,0.78
+features,7,Eucledian Features,0.85,0.85,0.85,0.82
+features,9,Eucledian Features,0.86,0.86,0.86,0.84
